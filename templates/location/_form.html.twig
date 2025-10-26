@@ -1,0 +1,22 @@
+{{ form_start(form, { attr: { novalidate: 'novalidate' } }) }}
+<div class="mb-3">
+    {{ form_row(form.city) }}
+</div>
+
+<div class="mb-3">
+    {{ form_row(form.country) }}
+</div>
+
+<div class="mb-3">
+    {{ form_row(form.latitude) }}
+</div>
+
+<div class="mb-3">
+    {{ form_row(form.longitude) }}
+</div>
+
+<div class="mt-3">
+    <button class="btn btn-primary">{{ button_label|default('Save') }}</button>
+    <a class="btn btn-link" href="{{ path('app_location_index') }}">← Back to list</a>
+</div>
+{{ form_end(form) }}
